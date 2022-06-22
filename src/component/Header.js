@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { CryptoState } from "../CryptoContext";
 import "../csscomponent/Header.css";
 
 const useStyles = makeStyles(() => ({
@@ -24,10 +25,12 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Header = () => {
+  const { currency, setCurrency } = CryptoState();
   const classes = useStyles();
 
   const navigate = useNavigate();
 
+  console.log(currency);
   const darkTheme = createTheme({
     palette: {
       primary: {
@@ -47,7 +50,7 @@ const Header = () => {
                 className={classes.title}
                 onClick={() => navigate("/")}
               >
-                Track Crypto
+                CryptoMaze
               </Typography>
               <Select
                 variant="outlined"
@@ -56,6 +59,8 @@ const Header = () => {
                   height: 40,
                   marginRight: 15,
                 }}
+                value={currency}
+                onChange={(e) => setCurrency(e.target.value)}
               >
                 <MenuItem value={"USD"}>USD</MenuItem>
                 <MenuItem value={"INR"}>INR</MenuItem>

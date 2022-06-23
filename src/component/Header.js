@@ -31,6 +31,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   console.log(currency);
+
   const darkTheme = createTheme({
     palette: {
       primary: {

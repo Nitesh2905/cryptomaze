@@ -13,6 +13,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 import "../csscomponent/Header.css";
+import "../App.css";
 
 const useStyles = makeStyles(() => ({
   title: {
@@ -48,7 +49,7 @@ const Header = () => {
             <Toolbar>
               <Typography
                 variant="h6"
-                className={classes.title}
+                className={`${classes.title} header_text`}
                 onClick={() => navigate("/")}
               >
                 CryptoMaze

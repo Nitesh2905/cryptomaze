@@ -77,7 +77,7 @@ const CoinPage = () => {
 
   const classes = useStyles();
 
-  if (!coin) return <LinearProgress style={{ backgroundColor: "gold" }} />;
+  if (!coin) return <LinearProgress style={{ backgroundColor: "#AD68D0" }} />;
   // console.log(coin);
 
   return (

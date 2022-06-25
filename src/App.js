@@ -2,8 +2,7 @@ import "./App.css";
 import Header from "./component/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./component/Homepage";
-import CoinPage from "./component/CoinPage";
-import { makeStyles } from "@material-ui/core";
+import CoinPage from "./pages/CoinPage";
 
 function App() {
   return (

@@ -17,7 +17,7 @@ import "../csscomponent/Header.css";
 const useStyles = makeStyles(() => ({
   title: {
     flex: 1,
-    color: "gold",
+    color: "#AD68D0",
     fontFamily: "Montserrat",
     fontWeight: "bold",
     cursor: "pointer",

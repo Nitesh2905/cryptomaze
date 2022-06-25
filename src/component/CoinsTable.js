@@ -21,10 +21,6 @@ import { CryptoState } from "../CryptoContext";
 import { useNavigate } from "react-router-dom";
 import { Pagination } from "@material-ui/lab";
 
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
 const useStyles = makeStyles({
   row: {
     backgroundColor: "#16171a",
@@ -36,7 +32,7 @@ const useStyles = makeStyles({
   },
   pagination: {
     "& .MuiPaginationItem-root": {
-      color: "gold",
+      color: "#AD68D0",
     },
   },
 });
@@ -83,6 +79,10 @@ const CoinsTable = () => {
   const navigate = useNavigate();
 
   const classes = useStyles();
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
   //   console.log(coins);
 
   return (
@@ -102,10 +102,10 @@ const CoinsTable = () => {
         />
         <TableContainer component={Paper}>
           {loading ? (
-            <LinearProgress style={{ backgroundColor: "gold" }} />
+            <LinearProgress style={{ backgroundColor: "#AD68D0" }} />
           ) : (
             <Table>
-              <TableHead style={{ backgroundColor: "gold" }}>
+              <TableHead style={{ backgroundColor: "#AD68D0" }}>
                 <TableRow>
                   {["Coins", "Price", "24H Change", "Market Cap (M)"].map(
                     (head) => (
